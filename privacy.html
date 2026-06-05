@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GymRhythm Privacy Policy</title>
+<style>
+  :root {
+    --fg: #1a1a1a;
+    --muted: #555;
+    --bg: #ffffff;
+    --accent: #0a66c2;
+    --border: #e2e2e2;
+    --code-bg: #f4f4f5;
+  }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    max-width: 760px;
+    margin: 2rem auto;
+    padding: 0 1.25rem 4rem;
+    line-height: 1.6;
+    font-size: 17px;
+  }
+  h1 { font-size: 2rem; margin-top: 0; }
+  h2 { font-size: 1.4rem; margin-top: 2.2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem; }
+  h3 { font-size: 1.1rem; margin-top: 1.6rem; }
+  p, ul, ol, table { margin: 0.8rem 0; }
+  ul, ol { padding-left: 1.4rem; }
+  li { margin: 0.2rem 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  strong { color: var(--fg); }
+  code { background: var(--code-bg); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.92em; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  th, td { border: 1px solid var(--border); padding: 0.55rem 0.7rem; text-align: left; vertical-align: top; }
+  th { background: var(--code-bg); }
+  .effective { color: var(--muted); font-size: 0.95rem; }
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    table, thead, tbody, th, td, tr { display: block; }
+    thead { display: none; }
+    td { border: none; border-bottom: 1px solid var(--border); padding: 0.4rem 0; }
+    tr { border: 1px solid var(--border); border-radius: 6px; padding: 0.5rem; margin-bottom: 0.75rem; }
+  }
+</style>
+</head>
+<body>
+
+<h1>GymRhythm Privacy Policy</h1>
+<p class="effective"><strong>Effective date:</strong> 2026-06-05</p>
+
+<h2>1. Introduction</h2>
+<p>Hi, and thanks for using GymRhythm. This Privacy Policy explains what data we collect when you use the GymRhythm iOS app and any related services (we'll just call all of it "GymRhythm" or "the app" from here on), why we collect it, who we share it with, and what rights you have over it.</p>
+<p>We've tried to keep this readable. If anything is unclear, email us at riccardo.mewis@gmail.com and we'll explain.</p>
+
+<h2>2. Data Controller</h2>
+<p>GymRhythm is built and operated by an individual sole developer:</p>
+<ul>
+  <li><strong>Name:</strong> Nikolas Mewis</li>
+  <li><strong>Location:</strong> Munich, Germany</li>
+  <li><strong>Contact:</strong> riccardo.mewis@gmail.com</li>
+</ul>
+<p>For the purposes of the EU General Data Protection Regulation (GDPR), Nikolas Mewis is the "data controller" for your personal data. For users in California, the equivalent term is "business."</p>
+
+<h2>3. What information we collect</h2>
+<p>We try to collect as little as possible. Here's what we do collect, grouped by category.</p>
+
+<h3>Account and identity</h3>
+<p>When you create an account, we need a way to recognize you next time you open the app. We use Firebase Authentication for this, and you can sign in with an email and password, Google, or Apple. If you sign in with Apple, we also store a one-time authorization code in your device's Keychain so we can fully revoke the Apple sign-in if you ever delete your account.</p>
+<ul>
+  <li>Email address</li>
+  <li>Firebase Authentication user ID (a random string used as your account key)</li>
+  <li>Sign-in provider (email, Google, or Apple)</li>
+  <li>Display name (the name you choose to show in the app; may come from your Apple or Google sign-in if you use those providers)</li>
+  <li>Apple authorization code (only if you sign in with Apple, stored locally in the iOS Keychain)</li>
+</ul>
+
+<h3>Profile and fitness data</h3>
+<p>These are the things you tell us about yourself during onboarding or later in your profile. They power your personalized stats, your weekly goal, and your progress over time. You can change or clear most of this from the Profile screen.</p>
+<ul>
+  <li>Name</li>
+  <li>Weight (in kg and lbs)</li>
+  <li>Height (in cm and inches)</li>
+  <li>Birthdate and age</li>
+  <li>Gender</li>
+  <li>Weekly workout goal</li>
+  <li>Whether you describe yourself as a beginner, returner, or experienced lifter, and whether your goal is to lose weight, build muscle, stay consistent, etc., so we can pick the right onboarding copy and in-app messaging for you</li>
+  <li>Where you heard about GymRhythm</li>
+  <li>Whether you've used other fitness apps before</li>
+  <li>Weight and height history snapshots (so you can see changes over time)</li>
+</ul>
+<p>Most profile fields beyond name and basic sign-in details are <strong>optional</strong> — see Section 5a for what's required vs. optional.</p>
+
+<h3>Location data</h3>
+<p>GymRhythm's main differentiator is automatic workout detection: when you walk into your gym, we want the app to notice and log it for you. To do that, we let you save one or more gym locations and we use a small <strong>geofence</strong> around each one. We do not record a trail of where you go.</p>
+<ul>
+  <li>Saved gym name, address, and coordinates</li>
+  <li>The radius you've chosen for each gym's geofence (default 100m)</li>
+  <li>Your current iOS location permission status (so we can show the right setup prompts)</li>
+  <li>Your current location, used <strong>in memory only</strong>, to check whether you've entered or left a gym geofence; we don't write this to disk and we don't upload it</li>
+</ul>
+<p>We only ask for "Always" location access <strong>after</strong> you've decided to use the auto-detection feature, and you can change this any time in iOS Settings. If you deny location access, the app still works — you'll just need to log workouts manually.</p>
+
+<h3>Workout activity</h3>
+<p>Every time you complete a workout (whether automatically or manually), we save a record of it so you can see your history and streaks.</p>
+<ul>
+  <li>Session start time, end time, and duration</li>
+  <li>XP earned for the session</li>
+  <li>Which saved gym the workout was attributed to</li>
+  <li>Session status (completed, skipped, etc.) and source (auto-detected, manual, or routine)</li>
+  <li>Your routine schedule rules (which days and times you plan to train) and any time-bound exceptions</li>
+  <li>XP and level progression, and daily XP claim records (used to prevent farming exploits)</li>
+  <li>Daily consistency snapshots used to compute streaks and habit metrics</li>
+</ul>
+
+<h3>Subscription and purchase data</h3>
+<p>If you subscribe to GymRhythm Premium, we work with RevenueCat to validate your subscription with Apple and remember your entitlement across devices.</p>
+<ul>
+  <li>Whether you currently have a Premium subscription</li>
+  <li>Your RevenueCat customer info: subscription status, renewal/expiry dates, transaction history, and your Firebase Auth user ID used as the RevenueCat customer ID</li>
+</ul>
+<p>Apple processes the actual payment. We never see your card details.</p>
+
+<h3>App usage and diagnostics (only if you opt in)</h3>
+<p>These two categories are <strong>off by default</strong>. You'll see a consent question during onboarding, and you can change your answer any time in Settings.</p>
+<p>If you turn on <strong>Product analytics</strong>, we collect:</p>
+<ul>
+  <li>Screens you view, and roughly how long you spend on each</li>
+  <li>Button taps and key in-app events (for example, completing a workout)</li>
+  <li>User properties like your level, premium status, weekly goal, age group, gender, goal type, and acquisition source — used for cohort segmentation, not advertising</li>
+</ul>
+<p>If you turn on <strong>Crash reporting</strong>, we collect:</p>
+<ul>
+  <li>Stack traces from crashes and non-fatal errors</li>
+  <li>"Breadcrumbs" — a short log of which screens you visited before the crash</li>
+  <li>App version and device model</li>
+  <li>Custom crash keys that mirror the user properties above (level, premium status, weekly goal, age group, gender, goal type, acquisition source) so we can correlate crashes with cohorts. Because these keys are attached to your account, Crash Data is <strong>linked to you</strong> when crash reporting is enabled.</li>
+</ul>
+<p>Both are gated by your consent toggle and stop collecting the moment you turn them off.</p>
+
+<h3>Your feedback</h3>
+<p>If you submit a suggestion through the in-app Feedback screen, we store it so we can read it and act on it.</p>
+<ul>
+  <li>Suggestion title and description (whatever you typed)</li>
+  <li>Category you picked</li>
+  <li>A link back to your account so you can edit or delete it later</li>
+</ul>
+<p>You can delete your own suggestions from the Feedback screen.</p>
+
+<h3>Notification preferences</h3>
+<p>So we send you the right amount of nudges and not more.</p>
+<ul>
+  <li>Notification level (essential, balanced, or all-in)</li>
+  <li>A couple of onboarding progress flags (whether you've finished onboarding, and whether you've reached the login screen) so we know which screens to show you next</li>
+  <li>Your analytics and crash-reporting consent choices and whether you've answered the consent question yet</li>
+</ul>
+
+<h2>4. How we use your information</h2>
+<p>We use your data for the following purposes:</p>
+<ul>
+  <li><strong>Provide the workout tracking service</strong> — let you log workouts, view your history, and use the core features of the app.</li>
+  <li><strong>Save your progress across devices</strong> — sync your workouts and settings so you can pick up where you left off.</li>
+  <li><strong>Count your workouts toward streaks</strong> — track consistency, streaks, and progress over time.</li>
+  <li><strong>Geofence your gym for automatic check-ins</strong> — detect when you arrive at your gym so the app can start a workout for you automatically.</li>
+  <li><strong>Process your subscription</strong> — manage your paid subscription, including renewals and refunds via Apple and our payment processor.</li>
+  <li><strong>Fix bugs</strong> — if you opt in, send us crash reports so we can diagnose and fix problems.</li>
+  <li><strong>Understand product usage</strong> — if you opt in, collect anonymous analytics so we can improve the app.</li>
+</ul>
+<p>Analytics and crash reporting are <strong>off by default</strong>. You choose whether to enable them, and you can change your mind any time in Settings.</p>
+
+<h2>5. Legal basis under GDPR</h2>
+<p>If you're in the EU, the European Economic Area (EEA), or the UK, GDPR requires us to tell you the legal basis we rely on for each purpose. Here's the breakdown:</p>
+<ul>
+  <li><strong>Performance of a contract (Art. 6(1)(b) GDPR)</strong> — for the core app functionality you signed up for: account management, storing your workouts, location-based auto check-ins, and processing your subscription. Without this data, the app can't do its job.</li>
+  <li><strong>Consent (Art. 6(1)(a) GDPR)</strong> — for analytics and crash reporting. These are opt-in via Settings. You can withdraw your consent at any time, and we'll stop the collection going forward.</li>
+  <li><strong>Legitimate interests (Art. 6(1)(f) GDPR)</strong> — for security and abuse prevention, including rate limiting and Firebase App Check. Our legitimate interest is keeping the service reliable and protecting it (and you) from abuse. We've weighed this against your rights and believe it's proportionate.</li>
+</ul>
+
+<h3>5a. Is providing this data required?</h3>
+<p>Article 13(2)(e) GDPR requires us to tell you whether providing your data is mandatory and what happens if you don't. Here's the plain-English version:</p>
+<ul>
+  <li><strong>Required to create an account (contractual requirement):</strong> an email address or a sign-in identifier from Apple or Google, plus the Firebase Authentication user ID we generate. Without these we can't create an account for you, and without an account the app's sync, history, and subscription features won't work.</li>
+  <li><strong>Required only if you subscribe (contractual requirement):</strong> the RevenueCat / Firebase user ID used to look up your Premium entitlement. Without it we can't process or restore your subscription.</li>
+  <li><strong>Required only if you enable auto check-in (optional feature):</strong> "Always" location permission plus at least one saved gym. If you deny location access or don't save a gym, auto check-in is unavailable but manual workout logging remains fully available.</li>
+  <li><strong>Optional in all cases:</strong> display name, full name, weight, height, birthdate, gender, weekly workout goal, identity stage (beginner / returner / experienced), goal type (e.g., lose weight, build muscle), where you heard about us, whether you've used other fitness apps, and weight/height history. If you leave these blank, the app still works — you'll just see less personalized stats, messaging, and onboarding.</li>
+  <li><strong>Always opt-in:</strong> product analytics and crash reporting. If you don't consent, we collect neither, and the app behaves the same way for you.</li>
+</ul>
+
+<h2>6. Third parties we share data with</h2>
+<p>We use a small number of third-party "sub-processors" to run the app. They process data on our behalf, under contract, for the purposes listed above.</p>
+
+<h3>Authentication</h3>
+<table>
+  <thead><tr><th>Provider</th><th>What they do for us</th><th>What data they receive</th><th>Privacy policy</th></tr></thead>
+  <tbody>
+    <tr><td>Firebase Authentication (Google)</td><td>Creates and manages your account, handles sign-in and password recovery</td><td>Email, password hash, display name, authentication tokens</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+    <tr><td>Google Sign-In SDK</td><td>Lets you sign in with your Google account</td><td>Google account email, ID token, access token (used only to exchange for a Firebase credential)</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+    <tr><td>Sign in with Apple</td><td>Lets you sign in with your Apple account</td><td>An anonymized Apple user ID, an authorization code (stored locally in the Keychain for account-deletion revocation), and your email <strong>only</strong> if you choose to share it</td><td><a href="https://www.apple.com/privacy">apple.com/privacy</a></td></tr>
+  </tbody>
+</table>
+
+<h3>Cloud storage</h3>
+<table>
+  <thead><tr><th>Provider</th><th>What they do for us</th><th>What data they receive</th><th>Privacy policy</th></tr></thead>
+  <tbody>
+    <tr><td>Cloud Firestore (Google)</td><td>Stores your account data in the cloud so it syncs across devices</td><td>All user data: profile (name, weight, height, birthdate, gender, goals), saved gym locations, workout sessions, routines, XP claims, metrics history, consistency history, feedback submissions, and your location-permission status</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+  </tbody>
+</table>
+
+<h3>Product analytics (only if you opt in)</h3>
+<table>
+  <thead><tr><th>Provider</th><th>What they do for us</th><th>What data they receive</th><th>Privacy policy</th></tr></thead>
+  <tbody>
+    <tr><td>Firebase Analytics (Google)</td><td>Helps us understand which features get used so we can prioritize improvements</td><td>Screen views, custom events, user properties (level, premium status, weekly goal, gender, goal type, acquisition source, age group, streak) and session duration — <strong>only when analytics consent is on</strong></td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+  </tbody>
+</table>
+
+<h3>Crash reporting (only if you opt in)</h3>
+<table>
+  <thead><tr><th>Provider</th><th>What they do for us</th><th>What data they receive</th><th>Privacy policy</th></tr></thead>
+  <tbody>
+    <tr><td>Firebase Crashlytics (Google)</td><td>Captures crashes and non-fatal errors so we can fix them</td><td>Stack traces, breadcrumbs, custom crash keys that mirror your user properties (level, premium status, weekly goal, age group, gender, goal type, acquisition source), app version, device model — <strong>only when crash-reporting consent is on</strong>. Because these keys are tied to your account, this data is linked to you.</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+  </tbody>
+</table>
+
+<h3>App integrity</h3>
+<table>
+  <thead><tr><th>Provider</th><th>What they do for us</th><th>What data they receive</th><th>Privacy policy</th></tr></thead>
+  <tbody>
+    <tr><td>Firebase App Check (Google)</td><td>Confirms requests to our backend come from a genuine copy of the app, not a bot or tampered build</td><td>An attestation token (DeviceCheck on iOS 13, App Attest on iOS 14+, or a debug token in development)</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+  </tbody>
+</table>
+
+<h3>Subscriptions</h3>
+<table>
+  <thead><tr><th>Provider</th><th>What they do for us</th><th>What data they receive</th><th>Privacy policy</th></tr></thead>
+  <tbody>
+    <tr><td>RevenueCat</td><td>Validates your Premium subscription with Apple, restores purchases on new devices, and tracks entitlements</td><td>Your Firebase Auth user ID (as the RevenueCat app user ID), subscription purchase data, entitlements, subscription dates, and transaction history</td><td><a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></td></tr>
+  </tbody>
+</table>
+
+<h3>Maps</h3>
+<table>
+  <thead><tr><th>Provider</th><th>What they do for us</th><th>What data they receive</th><th>Privacy policy</th></tr></thead>
+  <tbody>
+    <tr><td>MapKit and Apple Maps</td><td>Powers gym search, geocoding, reverse geocoding, and the map display when you pick a gym</td><td>Your search queries (gym names), your current location, and coordinates for reverse geocoding</td><td><a href="https://www.apple.com/privacy">apple.com/privacy</a></td></tr>
+  </tbody>
+</table>
+
+<p>We do <strong>not</strong> sell your personal information, and we do not share it with advertisers.</p>
+
+<h2>7. International data transfers</h2>
+<p>Some of our sub-processors (notably Firebase/Google, Apple, and RevenueCat) process data on servers located in the United States and other countries outside the EU/EEA.</p>
+<p>Where data is transferred outside the EU/EEA, we rely on the European Commission's <strong>Standard Contractual Clauses (SCCs)</strong> and any additional safeguards our sub-processors have put in place (for example, Google's and Apple's published Data Processing Addenda). If you'd like more detail on a specific transfer, email us.</p>
+
+<h2>8. How long we keep your data</h2>
+<ul>
+  <li>We keep your account data for as long as you have an account with us.</li>
+  <li>When you delete your account (in-app: Settings -&gt; Delete Account), your Firebase Authentication record and your Firestore data are <strong>wiped immediately</strong>.</li>
+  <li>Any residual server logs (for example, crash logs or security logs) are purged within <strong>30 days</strong> of account deletion.</li>
+</ul>
+<p>You don't need to email us to delete your data — the in-app button does it for you. But you can email us as a backup if anything goes wrong.</p>
+
+<h2>9. Your rights</h2>
+
+<h3>If you're in the EU/EEA or UK (GDPR)</h3>
+<p>You have the right to:</p>
+<ul>
+  <li><strong>Access</strong> the personal data we hold about you.</li>
+  <li><strong>Rectify</strong> inaccurate data.</li>
+  <li><strong>Erase</strong> your data ("right to be forgotten").</li>
+  <li><strong>Port</strong> your data to another service in a machine-readable format.</li>
+  <li><strong>Restrict</strong> processing in certain circumstances.</li>
+  <li><strong>Object</strong> to processing based on legitimate interests.</li>
+  <li><strong>Withdraw consent</strong> at any time (for analytics/crash reporting), without affecting the lawfulness of past processing.</li>
+  <li><strong>Lodge a complaint</strong> with a supervisory authority. Our lead authority is the <strong>Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)</strong> in Germany, but you can complain to the supervisory authority in your country of residence.</li>
+</ul>
+
+<h3>If you're in California (California Consumer Privacy Act / California Privacy Rights Act, "CCPA/CPRA")</h3>
+<p>You have the right to know what we collect, to delete it, to correct it, and to not be discriminated against for exercising these rights.</p>
+<p><strong>We do not sell your personal information.</strong> We do not "share" it for cross-context behavioral advertising. There is no "Do Not Sell or Share My Personal Information" link because there's nothing to opt out of.</p>
+
+<h3>How to exercise your rights</h3>
+<ul>
+  <li><strong>Delete your account and data:</strong> Settings -&gt; Delete Account, inside the app.</li>
+  <li><strong>Toggle analytics or crash reporting consent:</strong> Settings, inside the app.</li>
+  <li><strong>Anything else (access, rectification, portability, questions):</strong> email riccardo.mewis@gmail.com.</li>
+</ul>
+<p>We'll respond within 30 days.</p>
+
+<h2>10. Security</h2>
+<p>We take reasonable steps to protect your data:</p>
+<ul>
+  <li>Data in transit is encrypted using <strong>TLS</strong>.</li>
+  <li>Data at rest is stored in <strong>Firebase</strong> (Google Cloud), which encrypts data at rest by default.</li>
+  <li>Sensitive credentials (such as authentication tokens) are stored in the <strong>iOS Keychain</strong> on your device.</li>
+  <li>Access to backend services is protected by <strong>Firebase App Check</strong> and standard authentication.</li>
+</ul>
+<p>No system is 100% secure, and we won't pretend otherwise. If a breach affects your data, we'll notify you and the relevant authorities in line with our GDPR obligations.</p>
+
+<h2>11. Children</h2>
+<p>GymRhythm is <strong>not directed at children under 13</strong>. We do not knowingly collect personal data from children under 13. If you believe a child has provided us with personal data, please email riccardo.mewis@gmail.com and we'll delete it.</p>
+
+<h2>12. Cookies and tracking technologies</h2>
+<p>We keep this simple:</p>
+<ul>
+  <li>We <strong>don't use cookies</strong> (GymRhythm is a native iOS app, not a website).</li>
+  <li>We <strong>don't use IDFA</strong> (Apple's advertising identifier).</li>
+  <li>We <strong>don't do cross-app or cross-site tracking</strong>.</li>
+  <li>Because of the above, we don't show an <strong>App Tracking Transparency</strong> prompt — there's nothing to track across apps.</li>
+</ul>
+
+<h2>13. Automated decision-making and profiling</h2>
+<p>GymRhythm does <strong>not</strong> engage in automated decision-making, including profiling, that produces legal effects concerning you or similarly significantly affects you within the meaning of <strong>Article 22 GDPR</strong>.</p>
+<p>The cohort segmentation described in Section 3 (used for product analytics if you have opted in, and mirrored into crash keys if you have opted in to crash reporting) is used only to inform product improvements and bug fixes. It does not determine pricing, entitlements, access to features, or any other outcome that produces legal or similarly significant effects on you.</p>
+
+<h2>14. Changes to this policy</h2>
+<p>We may update this policy from time to time. When we do, we'll update the "Effective date" at the top.</p>
+<p>If the changes are <strong>material</strong> (for example, a new sub-processor, a new category of data, or a new purpose), we'll notify you in-app before the changes take effect.</p>
+
+<h2>15. Contact</h2>
+<p>Questions, requests, or complaints about this policy or your data?</p>
+<p>Email: <strong>riccardo.mewis@gmail.com</strong></p>
+<p>We read everything and we'll get back to you.</p>
+
+</body>
+</html>
