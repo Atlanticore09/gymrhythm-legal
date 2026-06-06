@@ -100,6 +100,8 @@ If you turn on **Crash reporting**, we collect:
 
 Both are gated by your consent toggle and stop collecting the moment you turn them off.
 
+**Anonymous onboarding metrics.** When you first set up GymRhythm, we collect anonymous funnel events — which onboarding step you're on, how long you spent on it, and which category you selected (e.g., "tiktok" as a source, "general fitness" as a goal). These events are NOT linked to any user account or identifier — they're stripped of your user ID, email, name, weight, height, and birth date. They exist only to help us understand where the onboarding flow loses people so we can fix it. You can opt out anytime via Profile → Data & Privacy → Anonymous onboarding metrics.
+
 ### Your feedback
 
 If you submit a suggestion through the in-app Feedback screen, we store it so we can read it and act on it.
@@ -139,6 +141,7 @@ If you're in the EU, the European Economic Area (EEA), or the UK, GDPR requires 
 - **Performance of a contract (Art. 6(1)(b) GDPR)** — for the core app functionality you signed up for: account management, storing your workouts, location-based auto check-ins, and processing your subscription. Without this data, the app can't do its job.
 - **Consent (Art. 6(1)(a) GDPR)** — for analytics and crash reporting. These are opt-in via Settings. You can withdraw your consent at any time, and we'll stop the collection going forward.
 - **Legitimate interests (Art. 6(1)(f) GDPR)** — for security and abuse prevention, including rate limiting and Firebase App Check. Our legitimate interest is keeping the service reliable and protecting it (and you) from abuse. We've weighed this against your rights and believe it's proportionate.
+- **Anonymous onboarding metrics: Legitimate interests (Art 6(1)(f))** — improving the app's onboarding flow. Because these events carry no identifier, there is no privacy impact requiring consent.
 
 ### 5a. Is providing this data required?
 
@@ -239,6 +242,7 @@ You have the right to know what we collect, to delete it, to correct it, and to 
 
 - **Delete your account and data:** Settings -> Delete Account, inside the app.
 - **Toggle analytics or crash reporting consent:** Settings, inside the app.
+- **Disable anonymous onboarding metrics** via Profile → Data & Privacy.
 - **Anything else (access, rectification, portability, questions):** email riccardo.mewis@gmail.com.
 
 We'll respond within 30 days.
