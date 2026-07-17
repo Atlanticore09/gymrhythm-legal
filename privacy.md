@@ -6,7 +6,7 @@
 
 Hi, and thanks for using GymRhythm. This Privacy Policy explains what data we collect when you use the GymRhythm iOS app and any related services (we'll just call all of it "GymRhythm" or "the app" from here on), why we collect it, who we share it with, and what rights you have over it.
 
-We've tried to keep this readable. If anything is unclear, email us at riccardo.mewis@gmail.com and we'll explain.
+We've tried to keep this readable. If anything is unclear, email us at support@gymrhythm.app and we'll explain.
 
 ## 2. Data Controller
 
@@ -14,7 +14,7 @@ GymRhythm is built and operated by an individual sole developer:
 
 - **Name:** Nikolas Mewis
 - **Location:** Munich, Germany
-- **Contact:** riccardo.mewis@gmail.com
+- **Contact:** support@gymrhythm.app
 
 For the purposes of the EU General Data Protection Regulation (GDPR), Nikolas Mewis is the "data controller" for your personal data. For users in California, the equivalent term is "business."
 
@@ -243,7 +243,7 @@ You have the right to know what we collect, to delete it, to correct it, and to 
 - **Delete your account and data:** Settings -> Delete Account, inside the app.
 - **Toggle analytics or crash reporting consent:** Settings, inside the app.
 - **Disable anonymous onboarding metrics** via Profile → Data & Privacy.
-- **Anything else (access, rectification, portability, questions):** email riccardo.mewis@gmail.com.
+- **Anything else (access, rectification, portability, questions):** email support@gymrhythm.app.
 
 We'll respond within 30 days.
 
@@ -260,7 +260,7 @@ No system is 100% secure, and we won't pretend otherwise. If a breach affects yo
 
 ## 11. Children
 
-GymRhythm is **not directed at children under 13**. We do not knowingly collect personal data from children under 13. If you believe a child has provided us with personal data, please email riccardo.mewis@gmail.com and we'll delete it.
+GymRhythm is **not directed at children under 13**. We do not knowingly collect personal data from children under 13. If you believe a child has provided us with personal data, please email support@gymrhythm.app and we'll delete it.
 
 ## 12. Cookies and tracking technologies
 
@@ -287,6 +287,6 @@ If the changes are **material** (for example, a new sub-processor, a new categor
 
 Questions, requests, or complaints about this policy or your data?
 
-Email: **riccardo.mewis@gmail.com**
+Email: **support@gymrhythm.app**
 
 We read everything and we'll get back to you.
