@@ -24,13 +24,13 @@ We try to collect as little as possible. Here's what we do collect, grouped by c
 
 ### Account and identity
 
-When you create an account, we need a way to recognize you next time you open the app. We use Firebase Authentication for this, and you can sign in with an email and password, Google, or Apple. If you sign in with Apple, we also store a one-time authorization code in your device's Keychain so we can fully revoke the Apple sign-in if you ever delete your account.
+When you create an account, we need a way to recognize you next time you open the app. We use Firebase Authentication for this, and you can sign in with an email and password, Google, or Apple. If you sign in with Apple, the app sends the one-time authorization code Apple returns to our server, which exchanges it with Apple for a revocation credential (a refresh token). That credential is stored in our cloud database, is readable by no one but us, and is used for exactly one thing: fully revoking the Apple sign-in when you delete your account. It is deleted together with your account.
 
 - Email address
 - Firebase Authentication user ID (a random string used as your account key)
 - Sign-in provider (email, Google, or Apple)
 - Display name (the name you choose to show in the app; may come from your Apple or Google sign-in if you use those providers)
-- Apple authorization code (only if you sign in with Apple, stored locally in the iOS Keychain)
+- Apple sign-in revocation credential (only if you sign in with Apple; kept server-side in our database until you delete your account)
 
 ### Profile and fitness data
 
@@ -78,6 +78,7 @@ If you subscribe to GymRhythm Premium, we work with RevenueCat to validate your 
 
 - Whether you currently have a Premium subscription
 - Your RevenueCat customer info: subscription status, renewal/expiry dates, transaction history, and your Firebase Auth user ID used as the RevenueCat customer ID
+- If premium was granted to you outside a purchase (for example a promo code or a manual grant), a redemption record: the code used, your user ID, and the redemption time — kept to enforce one-time use and audit grants, deleted with your account
 
 Apple processes the actual payment. We never see your card details.
 
@@ -167,7 +168,7 @@ We use a small number of third-party "sub-processors" to run the app. They proce
 |---|---|---|---|
 | Firebase Authentication (Google) | Creates and manages your account, handles sign-in and password recovery | Email, password hash, display name, authentication tokens | [policies.google.com/privacy](https://policies.google.com/privacy) |
 | Google Sign-In SDK | Lets you sign in with your Google account | Google account email, ID token, access token (used only to exchange for a Firebase credential) | [policies.google.com/privacy](https://policies.google.com/privacy) |
-| Sign in with Apple | Lets you sign in with your Apple account | An anonymized Apple user ID, an authorization code (stored locally in the Keychain for account-deletion revocation), and your email **only** if you choose to share it | [apple.com/privacy](https://www.apple.com/privacy) |
+| Sign in with Apple | Lets you sign in with your Apple account | An anonymized Apple user ID, a revocation credential (an Apple refresh token obtained from the one-time authorization code, kept server-side solely for account-deletion revocation), and your email **only** if you choose to share it | [apple.com/privacy](https://www.apple.com/privacy) |
 
 ### Cloud storage
 

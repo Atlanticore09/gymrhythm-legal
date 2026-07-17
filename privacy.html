@@ -69,13 +69,13 @@
 <p>We try to collect as little as possible. Here's what we do collect, grouped by category.</p>
 
 <h3>Account and identity</h3>
-<p>When you create an account, we need a way to recognize you next time you open the app. We use Firebase Authentication for this, and you can sign in with an email and password, Google, or Apple. If you sign in with Apple, we also store a one-time authorization code in your device's Keychain so we can fully revoke the Apple sign-in if you ever delete your account.</p>
+<p>When you create an account, we need a way to recognize you next time you open the app. We use Firebase Authentication for this, and you can sign in with an email and password, Google, or Apple. If you sign in with Apple, the app sends the one-time authorization code Apple returns to our server, which exchanges it with Apple for a revocation credential (a refresh token). That credential is stored in our cloud database, is readable by no one but us, and is used for exactly one thing: fully revoking the Apple sign-in when you delete your account. It is deleted together with your account.</p>
 <ul>
   <li>Email address</li>
   <li>Firebase Authentication user ID (a random string used as your account key)</li>
   <li>Sign-in provider (email, Google, or Apple)</li>
   <li>Display name (the name you choose to show in the app; may come from your Apple or Google sign-in if you use those providers)</li>
-  <li>Apple authorization code (only if you sign in with Apple, stored locally in the iOS Keychain)</li>
+  <li>Apple sign-in revocation credential (only if you sign in with Apple; kept server-side in our database until you delete your account)</li>
 </ul>
 
 <h3>Profile and fitness data</h3>
@@ -121,6 +121,7 @@
 <ul>
   <li>Whether you currently have a Premium subscription</li>
   <li>Your RevenueCat customer info: subscription status, renewal/expiry dates, transaction history, and your Firebase Auth user ID used as the RevenueCat customer ID</li>
+  <li>If premium was granted to you outside a purchase (for example a promo code or a manual grant), a redemption record: the code used, your user ID, and the redemption time — kept to enforce one-time use and audit grants, deleted with your account</li>
 </ul>
 <p>Apple processes the actual payment. We never see your card details.</p>
 
@@ -202,7 +203,7 @@
   <tbody>
     <tr><td>Firebase Authentication (Google)</td><td>Creates and manages your account, handles sign-in and password recovery</td><td>Email, password hash, display name, authentication tokens</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
     <tr><td>Google Sign-In SDK</td><td>Lets you sign in with your Google account</td><td>Google account email, ID token, access token (used only to exchange for a Firebase credential)</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
-    <tr><td>Sign in with Apple</td><td>Lets you sign in with your Apple account</td><td>An anonymized Apple user ID, an authorization code (stored locally in the Keychain for account-deletion revocation), and your email <strong>only</strong> if you choose to share it</td><td><a href="https://www.apple.com/privacy">apple.com/privacy</a></td></tr>
+    <tr><td>Sign in with Apple</td><td>Lets you sign in with your Apple account</td><td>An anonymized Apple user ID, a revocation credential (an Apple refresh token obtained from the one-time authorization code, kept server-side solely for account-deletion revocation), and your email <strong>only</strong> if you choose to share it</td><td><a href="https://www.apple.com/privacy">apple.com/privacy</a></td></tr>
   </tbody>
 </table>
 
