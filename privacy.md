@@ -1,6 +1,6 @@
 # GymRhythm Privacy Policy
 
-**Effective date:** 2026-06-05
+**Effective date:** 2026-07-17
 
 ## 1. Introduction
 
@@ -100,7 +100,9 @@ If you turn on **Crash reporting**, we collect:
 
 Both are gated by your consent toggle and stop collecting the moment you turn them off.
 
-**Anonymous onboarding metrics.** When you first set up GymRhythm, we collect anonymous funnel events — which onboarding step you're on, how long you spent on it, and which category you selected (e.g., "tiktok" as a source, "general fitness" as a goal). These events are NOT linked to any user account or identifier — they're stripped of your user ID, email, name, weight, height, and birth date. They exist only to help us understand where the onboarding flow loses people so we can fix it. You can opt out anytime via Profile → Data & Privacy → Anonymous onboarding metrics.
+**Anonymous onboarding statistics.** During onboarding, the app reports aggregate-only counters to our own server — for example, "the paywall step was viewed N times today, average time on it 30 seconds." These counts carry no user ID, no device ID, and no other identifier; they are summed into daily totals and cannot be traced back to you or your device. Separately, an optional **Anonymous onboarding metrics** toggle (Profile → Data & Privacy, off by default) lets you additionally share non-identified onboarding funnel events via our analytics provider.
+
+**Anonymous detection health statistics.** The app also reports aggregate-only counters about automatic workout detection (for example, how many sessions across all users started automatically vs. were suppressed on a given day). Like the onboarding statistics, these contain no identifiers of any kind and cannot be traced back to you.
 
 ### Your feedback
 
@@ -111,6 +113,8 @@ If you submit a suggestion through the in-app Feedback screen, we store it so we
 - A link back to your account so you can edit or delete it later
 
 You can delete your own suggestions from the Feedback screen.
+
+**Optional detection log.** When submitting feedback, you can choose to attach a diagnostic log of recent gym-detection events from your device (gym names, region enter/exit times, and session starts/ends — no GPS coordinates). This is **off by default**; if you tick the box, the log is uploaded with your report so we can investigate auto-tracking issues. It is visible only to the developer, deleted automatically after 90 days, and deleted immediately if you delete your account.
 
 ### Notification preferences
 
