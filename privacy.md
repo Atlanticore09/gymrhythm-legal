@@ -1,6 +1,6 @@
 # GymRhythm Privacy Policy
 
-**Effective date:** 2026-07-17
+**Effective date:** 2026-08-10
 
 ## 1. Introduction
 
@@ -84,7 +84,7 @@ Apple processes the actual payment. We never see your card details.
 
 ### App usage and diagnostics (only if you opt in)
 
-These two categories are **off by default**. You'll see a consent question during onboarding, and you can change your answer any time in Settings.
+**In the current version of the app, both of these categories are disabled entirely: there is no consent toggle, and neither product analytics nor crash reporting is collected for anyone.** The descriptions below are kept for transparency because a future version may reintroduce them, strictly as opt-in (off by default). If that happens, we will update this policy first.
 
 If you turn on **Product analytics**, we collect:
 
@@ -101,7 +101,7 @@ If you turn on **Crash reporting**, we collect:
 
 Both are gated by your consent toggle and stop collecting the moment you turn them off.
 
-**Anonymous onboarding statistics.** During onboarding, the app reports aggregate-only counters to our own server — for example, "the paywall step was viewed N times today, average time on it 30 seconds." These counts carry no user ID, no device ID, and no other identifier; they are summed into daily totals and cannot be traced back to you or your device. Separately, an optional **Anonymous onboarding metrics** toggle (Profile → Data & Privacy, off by default) lets you additionally share non-identified onboarding funnel events via our analytics provider.
+**Anonymous onboarding statistics.** During onboarding, the app reports aggregate-only counters to our own server — for example, "the paywall step was viewed N times today, average time on it 30 seconds." These counts carry no user ID, no device ID, and no other identifier; they are summed into daily totals and cannot be traced back to you or your device.
 
 **Anonymous detection health statistics.** The app also reports aggregate-only counters about automatic workout detection (for example, how many sessions across all users started automatically vs. were suppressed on a given day). Like the onboarding statistics, these contain no identifiers of any kind and cannot be traced back to you.
 
@@ -137,14 +137,14 @@ We use your data for the following purposes:
 - **Fix bugs** — if you opt in, send us crash reports so we can diagnose and fix problems.
 - **Understand product usage** — if you opt in, collect anonymous analytics so we can improve the app.
 
-Analytics and crash reporting are **off by default**. You choose whether to enable them, and you can change your mind any time in Settings.
+Analytics and crash reporting are **disabled in the current version of the app** — no one has them on. If a future version reintroduces them, they will be strictly opt-in and off by default.
 
 ## 5. Legal basis under GDPR
 
 If you're in the EU, the European Economic Area (EEA), or the UK, GDPR requires us to tell you the legal basis we rely on for each purpose. Here's the breakdown:
 
 - **Performance of a contract (Art. 6(1)(b) GDPR)** — for the core app functionality you signed up for: account management, storing your workouts, location-based auto check-ins, and processing your subscription. Without this data, the app can't do its job.
-- **Consent (Art. 6(1)(a) GDPR)** — for analytics and crash reporting. These are opt-in via Settings. You can withdraw your consent at any time, and we'll stop the collection going forward.
+- **Consent (Art. 6(1)(a) GDPR)** — for analytics and crash reporting, if a future version reintroduces them as opt-in features. In the current version both are disabled, so no data is processed on this basis. Where consent applies, you can withdraw it at any time and we'll stop the collection going forward.
 - **Legitimate interests (Art. 6(1)(f) GDPR)** — for security and abuse prevention, including rate limiting and Firebase App Check. Our legitimate interest is keeping the service reliable and protecting it (and you) from abuse. We've weighed this against your rights and believe it's proportionate.
 - **Anonymous onboarding metrics: Legitimate interests (Art 6(1)(f))** — improving the app's onboarding flow. Because these events carry no identifier, there is no privacy impact requiring consent.
 
@@ -246,8 +246,7 @@ You have the right to know what we collect, to delete it, to correct it, and to 
 ### How to exercise your rights
 
 - **Delete your account and data:** Settings -> Delete Account, inside the app.
-- **Toggle analytics or crash reporting consent:** Settings, inside the app.
-- **Disable anonymous onboarding metrics** via Profile → Data & Privacy.
+- **Analytics and crash reporting:** disabled in the current version — there is nothing to toggle. If a future version reintroduces them, an in-app control will come with them.
 - **Anything else (access, rectification, portability, questions):** email support@gymrhythm.app.
 
 We'll respond within 30 days.
