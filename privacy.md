@@ -115,7 +115,7 @@ If you submit a suggestion through the in-app Feedback screen, we store it so we
 
 You can delete your own suggestions from the Feedback screen.
 
-**Optional detection log.** When submitting feedback, you can choose to attach a diagnostic log of recent gym-detection events from your device (gym names, region enter/exit times, and session starts/ends — no GPS coordinates). This is **off by default**; if you tick the box, the log is uploaded with your report so we can investigate auto-tracking issues. It is visible only to the developer, deleted automatically after 90 days, and deleted immediately if you delete your account.
+**Optional diagnostics attachment.** When submitting feedback, you can choose to attach diagnostics from your device: a log of recent gym-detection events (gym names, region enter/exit times, and session starts/ends — no GPS coordinates) and, if the app recently crashed or froze, the crash or hang report that iOS itself generated on your device (stack traces and device model — no personal data). This is **off by default**; if you tick the box, the diagnostics are uploaded with your report so we can investigate the issue. They are visible only to the developer, deleted automatically after 90 days, and deleted immediately if you delete your account.
 
 ### Notification preferences
 
